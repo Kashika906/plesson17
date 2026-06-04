@@ -1,0 +1,37 @@
+import random
+
+while True:
+    print("Welcome to Rock, Paper, Scissors!")
+    
+    user_action = input("Enter a choice (rock, paper, scissors): ").lower()
+
+    possible_actions = ["rock", "paper", "scissors"]
+    computer_action = random.choice(possible_actions)
+
+    print(f"\nYou chose {user_action}, computer chose {computer_action}.\n")
+
+    if user_action == computer_action:
+        print("It's a tie!")
+
+    elif user_action == "rock":
+        if computer_action == "scissors":
+            print("You win!")
+        else:
+            print("You lose!")
+
+    elif user_action == "paper":
+        if computer_action == "rock":
+            print("You win!")
+        else:
+            print("You lose!")
+
+    elif user_action == "scissors":
+        if computer_action == "paper":
+            print("You win!")
+        else:
+            print("You lose!")
+
+    play_again = input("Play again? (y/n): ").lower()
+
+    if play_again != "y":
+        break
